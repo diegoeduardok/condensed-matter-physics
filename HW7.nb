@@ -1,0 +1,427 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14488,        419]
+NotebookOptionsPosition[     11444,        356]
+NotebookOutlinePosition[     11804,        372]
+CellTagsIndexPosition[     11761,        369]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Problem 1", "Text",
+ CellChangeTimes->{{3.7645677731466303`*^9, 
+  3.7645677779329557`*^9}},ExpressionUUID->"ed8c2fa1-e110-4ad0-ac0e-\
+9aeefc7ed1da"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ed", "=", 
+  TemplateBox[{"1","\"meV\"","millielectronvolts","\"Millielectronvolts\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.764565706943715*^9, 3.764565758031309*^9}, 
+   3.7645659073135366`*^9},ExpressionUUID->"ed74e6fa-33e9-4b15-a57e-\
+2f0c41e12806"],
+
+Cell[BoxData[
+ TemplateBox[{"1","\"meV\"","millielectronvolts","\"Millielectronvolts\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764565913618651*^9},ExpressionUUID->"f740ee3a-d994-4c55-84e9-\
+d7bd1355b22b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Nd", "=", 
+  RowBox[{
+   RowBox[{"10", "^", "13"}], "/", 
+   TemplateBox[{InterpretationBox["\[InvisibleSpace]", 1],RowBox[{
+       SuperscriptBox["\"cm\"", "3"]}],"centimeters cubed",SuperscriptBox[
+     "\"Centimeters\"", "3"]},
+    "Quantity"]}]}]], "Input",
+ CellChangeTimes->{{3.7645657803530273`*^9, 3.764565787989582*^9}, 
+   3.764565910094355*^9},ExpressionUUID->"d58890ce-c006-4eeb-822f-\
+9dcc9e7b7edd"],
+
+Cell[BoxData[
+ TemplateBox[{"10000000000000",RowBox[{"\"/\"", "\[InvisibleSpace]", 
+     SuperscriptBox["\"cm\"", "3"]}],Row[{"per", " ", "centimeters cubed"}],
+   FractionBox["1", 
+    SuperscriptBox["\"Centimeters\"", "3"]]},
+  "QuantityPostfix"]], "Output",
+ CellChangeTimes->{
+  3.764565915613892*^9},ExpressionUUID->"872a956b-7cb7-4438-bf99-\
+9932f1be0dd8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  TemplateBox[{"0.01",SubscriptBox[
+     StyleBox["\"m\"", Italic, StripOnInput -> False], 
+     StyleBox["\"e\"", Plain, StripOnInput -> False]],"electron masses",
+    "\"ElectronMass\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.764565950693183*^9, 
+  3.7645659598458776`*^9}},ExpressionUUID->"5989dfa4-6a8b-4235-8184-\
+25c8606f8e45"],
+
+Cell[BoxData[
+ TemplateBox[{"0.01`",SubscriptBox[
+    StyleBox["\"m\"", Italic, StripOnInput -> False], 
+    StyleBox["\"e\"", Plain, StripOnInput -> False]],"electron masses",
+   "\"ElectronMass\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764565976182413*^9},ExpressionUUID->"acb66f6b-478c-4ead-8f37-\
+5c44a031d12d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"T", "=", 
+  TemplateBox[{"4","\"K\"","kelvins","\"Kelvins\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.7645659801023684`*^9, 
+  3.7645659839185553`*^9}},ExpressionUUID->"26cdf21b-dc30-4df8-964a-\
+e18ae83df1c3"],
+
+Cell[BoxData[
+ TemplateBox[{"4","\"K\"","kelvins","\"Kelvins\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.76456599685385*^9},ExpressionUUID->"d398d066-1d96-471b-88f2-fd183ce21497"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[HBar]", "=", 
+  TemplateBox[{
+   "0.1592",StyleBox["\"h\"", Italic, StripOnInput -> False],
+    "Planck constants","\"PlanckConstant\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.764566031742813*^9, 
+  3.7645660379551563`*^9}},ExpressionUUID->"542dbd9e-cc1c-4b08-9377-\
+1fd2b06fa1e6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "0.1592`",StyleBox["\"h\"", Italic, StripOnInput -> False],
+   "Planck constants","\"PlanckConstant\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764566069307358*^9},ExpressionUUID->"c4e01ffd-c7cd-4474-9599-\
+7c0f722dd9d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"kb", "=", 
+  TemplateBox[{
+   "1",StyleBox["\"k\"", Italic, StripOnInput -> False],"Boltzmann constants",
+    "\"BoltzmannConstant\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.764566142298436*^9, 
+  3.764566148416916*^9}},ExpressionUUID->"e8818cb5-5217-40d3-a44f-\
+df74403866b9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "1",StyleBox["\"k\"", Italic, StripOnInput -> False],"Boltzmann constants",
+   "\"BoltzmannConstant\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764566185980619*^9},ExpressionUUID->"e5420fe6-408e-4d96-88e9-\
+28731d95ca4c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"n0", "=", 
+  RowBox[{"2", "*", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"m", "*", "kb", "*", 
+      RowBox[{"T", "/", 
+       RowBox[{"(", 
+        RowBox[{"2", "*", "Pi", "*", 
+         RowBox[{"\[HBar]", "^", "2"}]}], ")"}]}]}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"3", "/", "2"}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.764566196952887*^9, 3.764566244876861*^9}, {
+  3.764566363474689*^9, 3.7645663806076593`*^9}, {3.7645664852162533`*^9, 
+  3.7645665318202333`*^9}},ExpressionUUID->"d83ac9e0-73ef-4b58-8418-\
+cc9781043ace"],
+
+Cell[BoxData[
+ TemplateBox[{"0.25177986127006724`",RowBox[{
+     SubsuperscriptBox[
+      StyleBox["\"m\"", Italic, StripOnInput -> False], 
+      StyleBox["\"e\"", Plain, StripOnInput -> False], 
+      RowBox[{"3", "/", "2"}]], "\[InvisibleSpace]", 
+     SuperscriptBox["\"K\"", 
+      RowBox[{"3", "/", "2"}]], "\[InvisibleSpace]", 
+     SuperscriptBox[
+      StyleBox["\"k\"", Italic, StripOnInput -> False], 
+      RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+     "\[InvisibleSpace]", 
+     SuperscriptBox[
+      StyleBox["\"h\"", Italic, StripOnInput -> False], "3"]}],
+   "electron mass to the 3/2 kelvin to the 3/2 Boltzmann constants to the 3/2 \
+per Planck constant cubed",FractionBox[
+    RowBox[{
+      SuperscriptBox["\"BoltzmannConstant\"", 
+       RowBox[{"3", "/", "2"}]], " ", 
+      SuperscriptBox["\"ElectronMass\"", 
+       RowBox[{"3", "/", "2"}]], " ", 
+      SuperscriptBox["\"Kelvins\"", 
+       RowBox[{"3", "/", "2"}]]}], 
+    SuperscriptBox["\"PlanckConstant\"", "3"]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.7645662464205227`*^9, 3.76456649304775*^9, 
+  3.764566533511756*^9},ExpressionUUID->"47f04ea7-b23e-4620-98fa-\
+82007a1250b8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", "n0", "]"}]], "Input",
+ CellChangeTimes->{{3.764566536465233*^9, 
+  3.7645665486435947`*^9}},ExpressionUUID->"80ab2c4d-7c6f-4d01-9dab-\
+4d8bfb3cf468"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "3.860211534577988`*^19",RowBox[{"\"per \"", "\[InvisibleSpace]", 
+     SuperscriptBox["\"meter\"", "3"]}],Row[{"per", " ", "meters cubed"}],
+   FractionBox["1", 
+    SuperscriptBox["\"Meters\"", "3"]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764566549653679*^9},ExpressionUUID->"01682b4f-7d85-44b5-a722-\
+13ca50559ebd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"n", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n0", "*", "Nd"}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "2"}], ")"}]}], "*", 
+   RowBox[{"E", "^", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "Ed"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"2", "*", "kb", "*", "T"}], ")"}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7645665989290247`*^9, 
+  3.764566655877823*^9}},ExpressionUUID->"93c8b29b-4e21-4561-97c8-\
+e74b62db4846"],
+
+Cell[BoxData[
+ TemplateBox[{"371995.77553078625`",RowBox[{
+     SubsuperscriptBox[
+      StyleBox["\"m\"", Italic, StripOnInput -> False], 
+      StyleBox["\"e\"", Plain, StripOnInput -> False], 
+      RowBox[{"3", "/", "4"}]], "\[InvisibleSpace]", 
+     SuperscriptBox["\"K\"", 
+      RowBox[{"3", "/", "4"}]], "\[InvisibleSpace]", 
+     SuperscriptBox[
+      StyleBox["\"k\"", Italic, StripOnInput -> False], 
+      RowBox[{"3", "/", "4"}]], "\[NegativeMediumSpace]", "\"/(\"", 
+     "\[InvisibleSpace]", 
+     SuperscriptBox["\"cm\"", 
+      RowBox[{"3", "/", "2"}]], "\[InvisibleSpace]", 
+     SuperscriptBox[
+      StyleBox["\"h\"", Italic, StripOnInput -> False], 
+      RowBox[{"3", "/", "2"}]], "\[InvisibleSpace]", "\")\""}],
+   "electron mass to the 3/4 kelvin to the 3/4 Boltzmann constants to the 3/4 \
+per centimeter to the 3/2 Planck constant to the 3/2",FractionBox[
+    RowBox[{
+      SuperscriptBox["\"BoltzmannConstant\"", 
+       RowBox[{"3", "/", "4"}]], " ", 
+      SuperscriptBox["\"ElectronMass\"", 
+       RowBox[{"3", "/", "4"}]], " ", 
+      SuperscriptBox["\"Kelvins\"", 
+       RowBox[{"3", "/", "4"}]]}], 
+    RowBox[{
+      SuperscriptBox["\"Centimeters\"", 
+       RowBox[{"3", "/", "2"}]], " ", 
+      SuperscriptBox["\"PlanckConstant\"", 
+       RowBox[{"3", "/", "2"}]]}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.7645666589519377`*^9},ExpressionUUID->"135c277d-ed76-4e66-8bcf-\
+0c2c15a4c9f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", "n", "]"}]], "Input",
+ CellChangeTimes->{{3.764566661449279*^9, 
+  3.7645666689659147`*^9}},ExpressionUUID->"9990ea8c-8b09-4b57-a425-\
+db95cef278c0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "4.6060968462448486`*^18",RowBox[{"\"per \"", "\[InvisibleSpace]", 
+     SuperscriptBox["\"meter\"", "3"]}],Row[{"per", " ", "meters cubed"}],
+   FractionBox["1", 
+    SuperscriptBox["\"Meters\"", "3"]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764566669966654*^9},ExpressionUUID->"93fc3271-f38f-4381-bc48-\
+1bb1a949e34a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"e", "=", 
+  TemplateBox[{
+   "1",StyleBox["\"e\"", Italic, StripOnInput -> False],"elementary charges",
+    "\"ElementaryCharge\""},
+   "Quantity"]}]], "Input",
+ CellChangeTimes->{{3.7645671682155724`*^9, 3.7645671724056797`*^9}, {
+  3.764567212257248*^9, 
+  3.764567214807948*^9}},ExpressionUUID->"24a9fd21-08e5-4e29-bdc8-\
+34be616341a1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "1",StyleBox["\"e\"", Italic, StripOnInput -> False],"elementary charges",
+   "\"ElementaryCharge\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.764567216912487*^9},ExpressionUUID->"ddb015e1-b1fa-437c-9094-\
+01cea40af2de"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "1"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"n", "*", "e"}], ")"}]}], ",", 
+   TemplateBox[{InterpretationBox["\[InvisibleSpace]", 1],RowBox[{
+       SuperscriptBox["\"m\"", "3"], "\[NegativeMediumSpace]", "\"/\"", 
+       "\[InvisibleSpace]", "\"C\""}],"meters cubed per coulomb",FractionBox[
+      SuperscriptBox["\"Meters\"", "3"], "\"Coulombs\""]},
+    "Quantity"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764567203552472*^9, 
+  3.764567287755966*^9}},ExpressionUUID->"d3f708ac-837b-40bf-810d-\
+8cb755538212"],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"-", "1.3550538198022668`"}],RowBox[{
+     SuperscriptBox["\"m\"", "3"], "\[NegativeMediumSpace]", "\"/\"", 
+     "\[InvisibleSpace]", "\"C\""}],"meters cubed per coulomb",FractionBox[
+    SuperscriptBox["\"Meters\"", "3"], "\"Coulombs\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.7645672320621023`*^9, 3.764567246929953*^9}, 
+   3.764567312137789*^9},ExpressionUUID->"851d345c-4b8a-4274-bd61-\
+556309639e45"]
+}, Open  ]],
+
+Cell["Problem 2\[LineSeparator]", "Text",
+ CellChangeTimes->{{3.7645678036064053`*^9, 
+  3.764567808570591*^9}},ExpressionUUID->"0d3d6c00-416b-4d03-b21c-\
+29cc6522c3e2"]
+},
+WindowSize->{808, 700},
+WindowMargins->{{152, Automatic}, {Automatic, 13}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 155, 3, 35, "Text",ExpressionUUID->"ed8c2fa1-e110-4ad0-ac0e-9aeefc7ed1da"],
+Cell[CellGroupData[{
+Cell[738, 27, 290, 6, 32, "Input",ExpressionUUID->"ed74e6fa-33e9-4b15-a57e-2f0c41e12806"],
+Cell[1031, 35, 217, 5, 36, "Output",ExpressionUUID->"f740ee3a-d994-4c55-84e9-d7bd1355b22b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1285, 45, 436, 10, 38, "Input",ExpressionUUID->"d58890ce-c006-4eeb-822f-9dcc9e7b7edd"],
+Cell[1724, 57, 362, 8, 38, "Output",ExpressionUUID->"872a956b-7cb7-4438-bf99-9932f1be0dd8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2123, 70, 379, 9, 34, "Input",ExpressionUUID->"5989dfa4-6a8b-4235-8184-25c8606f8e45"],
+Cell[2505, 81, 328, 8, 38, "Output",ExpressionUUID->"acb66f6b-478c-4ead-8f37-5c44a031d12d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2870, 94, 244, 6, 30, "Input",ExpressionUUID->"26cdf21b-dc30-4df8-964a-e18ae83df1c3"],
+Cell[3117, 102, 190, 4, 34, "Output",ExpressionUUID->"d398d066-1d96-471b-88f2-fd183ce21497"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3344, 111, 319, 8, 32, "Input",ExpressionUUID->"542dbd9e-cc1c-4b08-9377-1fd2b06fa1e6"],
+Cell[3666, 121, 263, 7, 36, "Output",ExpressionUUID->"c4e01ffd-c7cd-4474-9599-7c0f722dd9d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3966, 133, 313, 8, 31, "Input",ExpressionUUID->"e8818cb5-5217-40d3-a44f-df74403866b9"],
+Cell[4282, 143, 263, 7, 35, "Output",ExpressionUUID->"e5420fe6-408e-4d96-88e9-28731d95ca4c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4582, 155, 568, 15, 30, "Input",ExpressionUUID->"d83ac9e0-73ef-4b58-8418-cc9781043ace"],
+Cell[5153, 172, 1187, 27, 41, "Output",ExpressionUUID->"47f04ea7-b23e-4620-98fa-82007a1250b8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6377, 204, 193, 4, 30, "Input",ExpressionUUID->"80ab2c4d-7c6f-4d01-9dab-4d8bfb3cf468"],
+Cell[6573, 210, 362, 9, 40, "Output",ExpressionUUID->"01682b4f-7d85-44b5-a722-13ca50559ebd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6972, 224, 492, 16, 30, "Input",ExpressionUUID->"93c8b29b-4e21-4561-97c8-e74b62db4846"],
+Cell[7467, 242, 1438, 34, 41, "Output",ExpressionUUID->"135c277d-ed76-4e66-8bcf-0c2c15a4c9f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8942, 281, 192, 4, 30, "Input",ExpressionUUID->"9990ea8c-8b09-4b57-a425-db95cef278c0"],
+Cell[9137, 287, 363, 9, 40, "Output",ExpressionUUID->"93fc3271-f38f-4381-bc48-1bb1a949e34a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9537, 301, 363, 9, 32, "Input",ExpressionUUID->"24a9fd21-08e5-4e29-bdc8-34be616341a1"],
+Cell[9903, 312, 261, 7, 36, "Output",ExpressionUUID->"ddb015e1-b1fa-437c-9094-01cea40af2de"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10201, 324, 598, 14, 39, "Input",ExpressionUUID->"d3f708ac-837b-40bf-810d-8cb755538212"],
+Cell[10802, 340, 454, 8, 38, "Output",ExpressionUUID->"851d345c-4b8a-4274-bd61-556309639e45"]
+}, Open  ]],
+Cell[11271, 351, 169, 3, 58, "Text",ExpressionUUID->"0d3d6c00-416b-4d03-b21c-29cc6522c3e2"]
+}
+]
+*)
+
